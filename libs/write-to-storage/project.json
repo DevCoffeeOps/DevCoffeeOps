@@ -1,0 +1,9 @@
+{
+  "name": "write-to-storage",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/write-to-storage/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project write-to-storage --web",
+  "targets": {}
+}

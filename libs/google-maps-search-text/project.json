@@ -1,0 +1,9 @@
+{
+  "name": "google-maps-search-text",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/google-maps-search-text/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project google-maps-search-text --web",
+  "targets": {}
+}

@@ -14,7 +14,17 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@dev-coffee-ops/assert-env-var": ["libs/assert-env-var/src/index.ts"],
+      "@dev-coffee-ops/coordinates-from-city-state": [
+        "libs/coordinates-from-city-state/src/index.ts"
+      ],
+      "@dev-coffee-ops/google-maps-search-text": [
+        "libs/google-maps-search-text/src/index.ts"
+      ],
+      "@dev-coffee-ops/query-places": ["libs/query-places/src/index.ts"],
+      "@dev-coffee-ops/write-to-storage": ["libs/write-to-storage/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

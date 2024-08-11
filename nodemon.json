@@ -1,0 +1,6 @@
+{
+    "watch": [
+        "apps/extract/.env.local"
+    ],
+    "exec": "npx nx build extract && npx nx serve extract"
+}

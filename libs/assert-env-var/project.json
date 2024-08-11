@@ -1,0 +1,9 @@
+{
+  "name": "assert-env-var",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/assert-env-var/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project assert-env-var --web",
+  "targets": {}
+}

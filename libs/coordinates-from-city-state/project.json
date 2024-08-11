@@ -1,0 +1,9 @@
+{
+  "name": "coordinates-from-city-state",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/coordinates-from-city-state/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project coordinates-from-city-state --web",
+  "targets": {}
+}
