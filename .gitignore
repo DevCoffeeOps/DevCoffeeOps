@@ -8,6 +8,7 @@ extract-output
 apps/extract/.env*
 *db
 *db-journal
+.next
 
 # dependencies
 node_modules
@@ -44,3 +45,7 @@ Thumbs.db
 
 .nx/cache
 .nx/workspace-data
+
+# Next.js
+.next
+out

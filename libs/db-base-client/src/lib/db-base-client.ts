@@ -40,3 +40,9 @@ export class RowService extends DbBaseClient<Row, Prisma.RowCreateInput, Prisma.
     super(prisma, 'row')
   }
 }
+
+export function createRowService(){
+  const prisma = new PrismaClient();
+  const rowService = new RowService(prisma);
+  return rowService;
+}
