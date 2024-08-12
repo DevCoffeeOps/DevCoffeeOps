@@ -33,7 +33,7 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": ["apps/extract-e2e/**/*"]
+      "exclude": ["apps/extract-e2e/**/*", "apps/load-e2e/**/*"]
     }
   ]
 }

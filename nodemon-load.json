@@ -1,0 +1,6 @@
+{
+    "watch": [
+        "apps/load/.env.local"
+    ],
+    "exec": "npx nx build load && npx nx serve load"
+}

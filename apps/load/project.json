@@ -1,0 +1,64 @@
+{
+  "name": "load",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/load/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "db:migrate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "rm -rf apps/load/prisma/migrations && npx prisma migrate reset -f --schema=apps/load/prisma/schema.prisma && npx prisma generate --schema=apps/load/prisma/schema.prisma && npx prisma migrate dev --name init --schema=apps/load/prisma/schema.prisma"
+      }
+    },
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "platform": "node",
+        "outputPath": "dist/apps/load",
+        "format": ["cjs"],
+        "bundle": false,
+        "main": "apps/load/src/main.ts",
+        "tsConfig": "apps/load/tsconfig.app.json",
+        "assets": ["apps/load/src/assets"],
+        "generatePackageJson": true,
+        "esbuildOptions": {
+          "sourcemap": true,
+          "outExtension": {
+            ".js": ".js"
+          }
+        }
+      },
+      "configurations": {
+        "development": {},
+        "production": {
+          "esbuildOptions": {
+            "sourcemap": false,
+            "outExtension": {
+              ".js": ".js"
+            }
+          }
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "load:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "load:build:development"
+        },
+        "production": {
+          "buildTarget": "load:build:production"
+        }
+      }
+    }
+  }
+}

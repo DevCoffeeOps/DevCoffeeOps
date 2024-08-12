@@ -1,0 +1,9 @@
+{
+  "name": "db-base-client",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/db-base-client/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project db-base-client --web",
+  "targets": {}
+}

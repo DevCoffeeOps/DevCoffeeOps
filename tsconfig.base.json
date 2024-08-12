@@ -19,6 +19,7 @@
       "@dev-coffee-ops/coordinates-from-city-state": [
         "libs/coordinates-from-city-state/src/index.ts"
       ],
+      "@dev-coffee-ops/db-base-client": ["libs/db-base-client/src/index.ts"],
       "@dev-coffee-ops/google-maps-search-text": [
         "libs/google-maps-search-text/src/index.ts"
       ],

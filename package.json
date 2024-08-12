@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "serve": "nodemon"
+    "serve:extract": "nodemon --config nodemon-extract.json",
+    "serve:load": "nodemon --config nodemon-load.json",
+    "db:migrate:load": "npx nx run load:db:migrate",
+    "db:studio:load": "npx prisma studio --schema=apps/load/prisma/schema.prisma"
   },
   "private": true,
   "devDependencies": {
@@ -30,12 +33,15 @@
     "nodemon": "^3.1.4",
     "nx": "19.5.7",
     "prettier": "^2.6.2",
+    "prisma": "^5.18.0",
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
     "typescript": "~5.5.2"
   },
   "dependencies": {
+    "@prisma/client": "^5.18.0",
     "axios": "^1.6.0",
+    "ts-runtime-checks": "^0.6.1",
     "tslib": "^2.3.0"
   }
 }

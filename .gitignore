@@ -4,8 +4,10 @@
 dist
 tmp
 /out-tsc
-output
+extract-output
 apps/extract/.env*
+*db
+*db-journal
 
 # dependencies
 node_modules
