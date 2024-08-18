@@ -9,6 +9,7 @@ apps/extract/.env*
 *db
 *db-journal
 .next
+.vscode
 
 # dependencies
 node_modules
